@@ -1,0 +1,170 @@
+CRITICAL - 2026-04-16 15:16:06 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: login]
+in APPPATH\Views\layouts\main.php on line 24.
+ 1 APPPATH\Views\layouts\main.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\View\View.php(256): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 6 APPPATH\Controllers\AuthController.php(29): view('auth/login')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\public\\index.php')
+ERROR - 2026-04-16 15:20:35 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php:111
+Stack trace:
+#0 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php(111): SQLite3->__construct('F:\\codeigniter4...')
+#1 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#2 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SELECT "NAME" F...')
+#5 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#6 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#7 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#9 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+#10 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+#11 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#12 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#13 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#14 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php:118
+Stack trace:
+#0 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(795): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SELECT "NAME" F...')
+#4 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::{closure:CodeIgniter\Commands\Database\Migrate::run():88}()
+#9 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+#10 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#11 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#12 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#13 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+ERROR - 2026-04-16 15:20:36 --> Error connecting to the database: Exception: Unable to open database: unable to open database file in F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php:111
+Stack trace:
+#0 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php(111): SQLite3->__construct('F:\\codeigniter4...')
+#1 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#2 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\Database.php(74): CodeIgniter\Database\SQLite3\Connection->initialize()
+#4 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\SQLite3\Connection))
+#5 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\Seeder.php(103): CodeIgniter\Database\Config::forge('default')
+#6 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#7 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#10 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: SQLite3 error: Unable to open database: unable to open database file in F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php:118
+Stack trace:
+#0 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\BaseConnection.php(555): CodeIgniter\Database\SQLite3\Connection->connect(false)
+#1 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\Database.php(74): CodeIgniter\Database\SQLite3\Connection->initialize()
+#3 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\SQLite3\Connection))
+#4 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Database\Seeder.php(103): CodeIgniter\Database\Config::forge('default')
+#5 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#6 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#7 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#8 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#9 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#10 F:\codeigniter4-framework-v4.7.2-0-gb3359be\codeigniter4-framework-b3359be\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2026-04-16 15:20:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [SQLite3]: SQLite3 error: Unable to open database: unable to open database file
+[Method: CLI, Route: db:seed/MainSeeder]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(74): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Database.php(74): CodeIgniter\Database\SQLite3\Connection->initialize()
+ 3 SYSTEMPATH\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\SQLite3\Connection))
+ 4 SYSTEMPATH\Database\Seeder.php(103): CodeIgniter\Database\Config::forge('default')
+ 5 SYSTEMPATH\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+ 6 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run([...])
+ 7 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 8 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 9 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+10 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-04-16 15:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-16 15:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-16 15:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-16 15:20:57 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: login]
+in APPPATH\Views\layouts\main.php on line 24.
+ 1 APPPATH\Views\layouts\main.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\View\View.php(256): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 6 APPPATH\Controllers\AuthController.php(29): view('auth/login')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\public\\index.php')
+DEBUG - 2026-04-16 15:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-16 15:20:57 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: login]
+in APPPATH\Views\layouts\main.php on line 24.
+ 1 APPPATH\Views\layouts\main.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\View\View.php(256): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 6 APPPATH\Controllers\AuthController.php(29): view('auth/login')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\public\\index.php')
+DEBUG - 2026-04-16 23:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-16 23:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-16 23:07:09 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: login]
+in APPPATH\Views\layouts\main.php on line 24.
+ 1 APPPATH\Views\layouts\main.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\View\View.php(256): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 6 APPPATH\Controllers\AuthController.php(29): view('auth/login')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\public\\index.php')
+DEBUG - 2026-04-16 23:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-16 23:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-04-16 23:29:46 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: login]
+in APPPATH\Views\layouts\main.php on line 24.
+ 1 APPPATH\Views\layouts\main.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php', 24)
+ 2 SYSTEMPATH\View\View.php(240): include('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\View\View.php(256): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 6 APPPATH\Controllers\AuthController.php(29): view('auth/login')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\public\\index.php')

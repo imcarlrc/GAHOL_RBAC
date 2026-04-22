@@ -1,0 +1,1436 @@
+CRITICAL - 2026-04-22 06:07:50 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: CLI, Route: db:create]
+in SYSTEMPATH\Database\Database.php on line 186.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Commands\Database\CreateDatabase.php(151): CodeIgniter\Database\Config::connect('default', false)
+ 4 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\CreateDatabase->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:create', [])
+ 6 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-04-22 06:11:32 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: CLI, Route: db:create]
+in SYSTEMPATH\Database\Database.php on line 186.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Commands\Database\CreateDatabase.php(151): CodeIgniter\Database\Config::connect('default', false)
+ 4 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\CreateDatabase->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:create', [])
+ 6 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-04-22 06:13:11 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: CLI, Route: db:create]
+in SYSTEMPATH\Database\Database.php on line 186.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Commands\Database\CreateDatabase.php(151): CodeIgniter\Database\Config::connect('default', false)
+ 4 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\CreateDatabase->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:create', [])
+ 6 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-04-22 06:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:44:53 --> Duplicate key name 'name'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2024-01-01-000001_CreateRolesTable.php(61): CodeIgniter\Database\Forge->createTable('roles')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateRolesTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-04-22 06:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:45:49 --> Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:45:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+[Method: GET, Route: management/students]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 2 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:45:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 4 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:45:49 --> [Caused by] mysqli_sql_exception: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+DEBUG - 2026-04-22 06:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 06:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:45:57 --> Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:45:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+[Method: GET, Route: management/students]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 2 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:45:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 4 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:45:57 --> [Caused by] mysqli_sql_exception: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+DEBUG - 2026-04-22 06:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:46:02 --> Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', [], false)
+ 5 APPPATH\Controllers\Admin\RoleController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\RoleController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\RoleController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+[Method: GET, Route: admin/roles]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', [], false)
+ 2 APPPATH\Controllers\Admin\RoleController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\RoleController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\RoleController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', [], false)
+ 4 APPPATH\Controllers\Admin\RoleController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\RoleController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\RoleController))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:02 --> [Caused by] mysqli_sql_exception: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', [], false)
+ 5 APPPATH\Controllers\Admin\RoleController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\RoleController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\RoleController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+DEBUG - 2026-04-22 06:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:46:21 --> Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', [], false)
+ 5 APPPATH\Controllers\Admin\RoleController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\RoleController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\RoleController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+[Method: GET, Route: admin/roles]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', [], false)
+ 2 APPPATH\Controllers\Admin\RoleController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\RoleController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\RoleController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', [], false)
+ 4 APPPATH\Controllers\Admin\RoleController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\RoleController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\RoleController))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:21 --> [Caused by] mysqli_sql_exception: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `r`.*, COUNT(u.id) AS user_count
+FROM `roles` `r`
+LEFT JOIN `users` `u` ON `u`.`role_id` = `r`.`id` AND `u`.`deleted_at` IS NULL
+GROUP BY `r`.`id`
+ORDER BY `r`.`id` ASC', [], false)
+ 5 APPPATH\Controllers\Admin\RoleController.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\RoleController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\RoleController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+DEBUG - 2026-04-22 06:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:46:33 --> Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+[Method: GET, Route: management/students]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 2 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 4 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:46:33 --> [Caused by] mysqli_sql_exception: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+DEBUG - 2026-04-22 06:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:47:42 --> Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [], false)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\UserAdminController.php(43): App\Models\UserModel->getAllWithRoles()
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\UserAdminController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserAdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:47:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+[Method: GET, Route: admin/users]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [], false)
+ 2 APPPATH\Models\UserModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin\UserAdminController.php(43): App\Models\UserModel->getAllWithRoles()
+ 4 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\UserAdminController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserAdminController))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:47:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [], false)
+ 4 APPPATH\Models\UserModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin\UserAdminController.php(43): App\Models\UserModel->getAllWithRoles()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\UserAdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserAdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:47:42 --> [Caused by] mysqli_sql_exception: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `r`.`name` AS `role_name`, `r`.`label` AS `role_label`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [], false)
+ 5 APPPATH\Models\UserModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin\UserAdminController.php(43): App\Models\UserModel->getAllWithRoles()
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\UserAdminController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\UserAdminController))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+DEBUG - 2026-04-22 06:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:47:58 --> Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:47:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+[Method: GET, Route: management/students]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 2 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:47:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 4 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:47:58 --> [Caused by] mysqli_sql_exception: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'student\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`student_id`, `u`.`course`, `u`.`year_level`, `u`.`section`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\StudentManagementController.php(47): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\StudentManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+DEBUG - 2026-04-22 06:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 06:48:15 --> Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'teacher\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'teacher\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'teacher\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\Admin\TeacherManagementController.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\TeacherManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TeacherManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:48:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+[Method: GET, Route: admin/teachers]
+in SYSTEMPATH\Database\BaseConnection.php on line 865.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 2 APPPATH\Controllers\Admin\TeacherManagementController.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\TeacherManagementController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TeacherManagementController))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:48:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'teacher\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'teacher\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 4 APPPATH\Controllers\Admin\TeacherManagementController.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\TeacherManagementController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TeacherManagementController))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+CRITICAL - 2026-04-22 06:48:15 --> [Caused by] mysqli_sql_exception: Table 'student_portal_db.roles' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'teacher\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'teacher\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = \'teacher\'
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id`, `u`.`name`, `u`.`email`, `u`.`created_at`, `u`.`profile_image`
+FROM `users` `u`
+LEFT JOIN `roles` `r` ON `r`.`id` = `u`.`role_id`
+WHERE `r`.`name` = :r.name:
+AND `u`.`deleted_at` IS NULL
+ORDER BY `u`.`name` ASC', [...], false)
+ 5 APPPATH\Controllers\Admin\TeacherManagementController.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin\TeacherManagementController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\TeacherManagementController))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\rbac_ntc-main\\public\\index.php')
+ERROR - 2026-04-22 06:50:03 --> Duplicate key name 'name'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2024-01-01-000001_CreateRolesTable.php(61): CodeIgniter\Database\Forge->createTable('roles')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateRolesTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-04-22 06:51:32 --> Duplicate key name 'name'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `roles` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL UNIQUE,
+	`label` VARCHAR(100) NOT NULL,
+	`description` TEXT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_roles` PRIMARY KEY(`id`),
+	UNIQUE KEY `name` (`name`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2024-01-01-000001_CreateRolesTable.php(61): CodeIgniter\Database\Forge->createTable('roles')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateRolesTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([...])
+12 SYSTEMPATH\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', [...])
+13 SYSTEMPATH\Commands\Database\MigrateRefresh.php(91): CodeIgniter\CLI\BaseCommand->call('migrate', [...])
+14 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\MigrateRefresh->CodeIgniter\Commands\Database\{closure}()
+15 SYSTEMPATH\Commands\Database\MigrateRefresh.php(89): CodeIgniter\Commands\Database\MigrateRefresh->withSignalsBlocked(Object(Closure))
+16 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run([...])
+17 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', [])
+18 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+19 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+20 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-04-22 07:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:25:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:29:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:30:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:32:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-04-22 07:40:13 --> Duplicate entry 'admin@school.edu' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role_id`, `updated_at`)
+VALUES (\'2026-04-22 07:40:13\',\'admin@school.edu\',\'Admin User\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',1,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'teacher@school.edu\',\'Teacher Cruz\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',2,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'student@school.edu\',\'Student Reyes\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',3,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'carla@school.edu\',\'Carla Gahol\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',3,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'coordinator@school.edu\',\'Coordinator Bautista\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',4,\'2026-04-22 07:40:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role_id`, `updated_at`)
+VALUES (\'2026-04-22 07:40:13\',\'admin@school.edu\',\'Admin User\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',1,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'teacher@school.edu\',\'Teacher Cruz\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',2,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'student@school.edu\',\'Student Reyes\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',3,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'carla@school.edu\',\'Carla Gahol\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',3,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'coordinator@school.edu\',\'Coordinator Bautista\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',4,\'2026-04-22 07:40:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role_id`, `updated_at`)
+VALUES (\'2026-04-22 07:40:13\',\'admin@school.edu\',\'Admin User\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',1,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'teacher@school.edu\',\'Teacher Cruz\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',2,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'student@school.edu\',\'Student Reyes\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',3,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'carla@school.edu\',\'Carla Gahol\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',3,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'coordinator@school.edu\',\'Coordinator Bautista\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',4,\'2026-04-22 07:40:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`created_at`, `email`, `name`, `password`, `role_id`, `updated_at`)
+VALUES (\'2026-04-22 07:40:13\',\'admin@school.edu\',\'Admin User\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',1,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'teacher@school.edu\',\'Teacher Cruz\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',2,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'student@school.edu\',\'Student Reyes\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',3,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'carla@school.edu\',\'Carla Gahol\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',3,\'2026-04-22 07:40:13\'), (\'2026-04-22 07:40:13\',\'coordinator@school.edu\',\'Coordinator Bautista\',\'$2y$10$pLCNfsBHM7.4xggDB/wBTuzOmIikL7vEqg2rnmDKjO2V9PQE.GLyy\',4,\'2026-04-22 07:40:13\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\UserSeeder.php(90): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\UserSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\UserSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-04-22 07:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:40:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:40:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:47:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:49:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:56:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 07:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:00:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:13:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:26:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 08:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:03:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:23:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:24:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-22 09:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
