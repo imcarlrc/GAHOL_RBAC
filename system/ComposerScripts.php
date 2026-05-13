@@ -171,4 +171,4 @@ final class ComposerScripts
             @copy($originDir . $kintInit, $targetDir . $kintInit);
         }
     }
-}
+} 
