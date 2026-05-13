@@ -1,4 +1,4 @@
-CRITICAL - 2026-04-22 06:07:50 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+CRITICAL - 2026-04-22 06:07:50 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver. 
 [Method: CLI, Route: db:create]
 in SYSTEMPATH\Database\Database.php on line 186.
  1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
