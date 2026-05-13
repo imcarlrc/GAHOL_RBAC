@@ -10,4 +10,4 @@ $roles = $db->table('roles')->get()->getResultArray();
 echo "ROLES:\n";
 print_r($roles);
 echo "\nUSERS:\n";
-print_r($users);
+print_r($users); 
