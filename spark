@@ -84,4 +84,4 @@ $paths = new Paths();
 // LOAD THE FRAMEWORK BOOTSTRAP FILE
 require $paths->systemDirectory . '/Boot.php';
 
-exit(Boot::bootSpark($paths));
+exit(Boot::bootSpark($paths)); 
