@@ -777,4 +777,4 @@ class Model extends BaseModel
             throw ModelException::forMethodNotAvailable(static::class, $name . '()');
         }
     }
-}
+} 
