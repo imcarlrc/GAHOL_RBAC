@@ -109,4 +109,4 @@ class preload
     }
 }
 
-(new preload())->load();
+(new preload())->load(); 
