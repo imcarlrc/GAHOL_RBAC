@@ -1174,4 +1174,4 @@ class CodeIgniter
 
         return $buffer;
     }
-}
+} 
