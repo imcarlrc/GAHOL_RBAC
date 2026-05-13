@@ -1,4 +1,4 @@
-CRITICAL - 2026-04-16 15:16:06 --> ErrorException: Trying to access array offset on null
+CRITICAL - 2026-04-16 15:16:06 --> ErrorException: Trying to access array offset on null 
 [Method: GET, Route: login]
 in APPPATH\Views\layouts\main.php on line 24.
  1 APPPATH\Views\layouts\main.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'F:\\codeigniter4-framework-v4.7.2-0-gb3359be\\codeigniter4-framework-b3359be\\app\\Views\\layouts\\main.php', 24)
