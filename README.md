@@ -91,4 +91,4 @@ http://localhost:8080
 - **Framework**: CodeIgniter 4.7.2
 - **Language**: PHP 8.4
 - **Database**: MySQL
-- **Frontend**: Bootstrap 5, Bootstrap Icons
+- **Frontend**: Bootstrap 5, Bootstrap Icons 
